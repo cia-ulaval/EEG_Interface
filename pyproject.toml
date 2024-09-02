@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "eeg-interface"
+version = "0.1.0"
+description = ""
+authors = ["CIA"]
+license = "Apache 2.0"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+click = "^8.1.7"
+brainflow = "^5.13.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
