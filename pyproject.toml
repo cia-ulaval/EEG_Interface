@@ -10,6 +10,11 @@ readme = "README.md"
 python = "^3.12"
 click = "^8.1.7"
 brainflow = "^5.13.3"
+argparse = "^1.4.0"
+pyqt5 = "^5.15.11"
+pyqtgraph = "^0.13.7"
+pyqt5-qt5 = "^5.15.14"
+pyqt5-sip = "^12.15.0"
 
 
 [build-system]
