@@ -7,7 +7,7 @@ license = "Apache 2.0"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "3.10.12"
 click = "^8.1.7"
 brainflow = "^5.13.3"
 argparse = "^1.4.0"
