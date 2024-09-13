@@ -1,14 +1,12 @@
 import click
-import pandas as pd
-from torch.utils.data import DataLoader
-from torch.utils.data import random_split
-from lightning.pytorch.loggers import MLFlowLogger
 import lightning as L
+import pandas as pd
+from lightning.pytorch.loggers import MLFlowLogger
+from torch.utils.data import DataLoader, random_split
 
-
-from EEG_Interface.Utils.Visualize import visualizeTimeSeries
-from EEG_Interface.Models.Demo import LitDense, Dense
-from EEG_Interface.DataHandler.Demo import DemoDataset
+from eeg_interface.DataHandler.Demo import DemoDataset
+from eeg_interface.Models.Demo import Dense, LitDense
+from eeg_interface.Utils.Visualize import visualizeTimeSeries
 
 
 @click.command(help="Classification of eeg data demo")
