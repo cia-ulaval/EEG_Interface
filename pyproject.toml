@@ -5,7 +5,7 @@ description = ""
 authors = ["CIA"]
 license = "Apache 2.0"
 readme = "README.md"
-packages = [{include = "EEG_Interface"}]
+packages = [{include = "eeg_interface"}]
 
 [tool.poetry.scripts]
 demo = "EEG_Interface.Demo:demo"
