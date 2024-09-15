@@ -4,9 +4,9 @@ import pandas as pd
 from lightning.pytorch.loggers import MLFlowLogger
 from torch.utils.data import DataLoader, random_split
 
-from eeg_interface.DataHandler.Demo import DemoDataset
-from eeg_interface.Models.Demo import Dense, LitDense
-from eeg_interface.Utils.Visualize import visualizeTimeSeries
+from eeg_interface.data_handler.demo import DemoDataset
+from eeg_interface.models.demo import Dense, LitDense
+from eeg_interface.utils.visualize import visualize_time_series
 
 
 @click.command(help="Classification of eeg data demo")
