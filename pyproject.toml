@@ -8,8 +8,8 @@ readme = "README.md"
 packages = [{include = "eeg_interface"}]
 
 [tool.poetry.scripts]
-demo = "EEG_Interface.Demo:demo"
-main = "EEG_Interface.main:cli"
+demo = "eeg_interface.demo:demo"
+main = "eeg_interface.main:cli"
 
 [tool.poetry.dependencies]
 python = "3.12.0"

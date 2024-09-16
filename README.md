@@ -129,7 +129,7 @@ Please use `notebooks` folder to put all visualization or demo notebooks.
 - To main project script :
 
 ```bash
-poetry run eeg-interface
+poetry run demo
 ```
 
 - To run unit tests :
