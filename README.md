@@ -48,7 +48,10 @@ pyenv install --list | grep " 3\."
 pyenv install <python version>
 
 # For example :
+
+
 pyenv install 3.12.0
+
 ```
 
 - Choose a specific python version :
@@ -93,6 +96,9 @@ poetry config virtualenvs.in-project true --local
 poetry install
 ```
 
+If your environment installation fails, delete the poetry.lock file and re-run the previous command. 
+This may be due to a different cuda version than the one originally installed.
+
 - Use poetry environment in terminal :
 
 ```bash
@@ -105,16 +111,6 @@ poetry shell
 # Further informations will be given later
 poetry run <script name>
 ```
-
-### poe the poet
-
-Last environment installation step ! Simply run :
-
-```bash
-poe torch-cuda
-```
-
-This is because *PyTorch* cuda version is not well handled by *poetry*.
 
 ## Data
 

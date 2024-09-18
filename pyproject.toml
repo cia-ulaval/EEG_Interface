@@ -12,7 +12,7 @@ demo = "eeg_interface.demo:demo"
 main = "eeg_interface.main:cli"
 
 [tool.poetry.dependencies]
-python = "3.12.0"
+python = "~3.12"
 click = "^8.1.7"
 brainflow = "^5.13.3"
 argparse = "^1.4.0"
