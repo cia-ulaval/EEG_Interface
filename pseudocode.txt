@@ -1,0 +1,41 @@
+### Understanding and Setting Up the EEG
+
+1. **Install Drivers and APIs**: Download and install the necessary drivers and libraries to interact with the EEG hardware. 
+Refer to the documentation to learn how to access the EEG data.
+2. **Set Up Communication**: Establish a connection between the EEG and the computer via Bluetooth or USB. Test the connection.
+
+
+### Acquisition and Processing of EEG Data
+1. **Read Raw Data**: Write a script to capture the raw EEG data.
+2. **Preprocess the Data**: EEG signals are noisy, so you will need to use filtering techniques to eliminate artifacts and noise. 
+Use low-pass or high-pass filters, or signal processing techniques such as Fourier Transform to analyze frequencies.
+3. **Extract Features**: Identify relevant features, such as amplitudes or specific frequencies, associated with mental states of 
+interest (e.g., concentration, impulse, or relaxation).
+4. **Create a Detection Model**: Use machine learning techniques to create a model that can interpret the EEG data. Train the model 
+to recognize patterns associated with specific actions (in this case, when you want the character to jump).
+
+
+### Integration with the Video Game
+
+1. **Develop a Control Interface**: Create an interface in Python that receives the processed EEG data and sends the appropriate commands 
+to the game. (Use tools like Pygame for the Python version of Flappy Bird.)
+2. **Send Commands to the Game**: Integrate the detection model with the game. When the model detects an intention (such as a jump), it 
+should send a signal to make the bird jump.
+
+
+### Testing and Adjustment
+
+1. **Test the System**: Check how the system reacts to different thoughts or states. Ensure the character responds correctly to the 
+EEG signals and adjust the model based on the results.
+2. **Adjust the Model and Parameters**: Fine-tune the AI model parameters, detection thresholds, or filters to improve accuracy and 
+responsiveness.
+3. **Evaluate User Experience**: Ensure that the EEG control is smooth and responsive. Make adjustments to enhance the user experience 
+based on feedback received.
+
+
+### Documentation and Presentation (If Presenting)
+
+1. **Document the Project**: Write detailed documentation on the hardware used, the code, the AI model, and the configuration steps. 
+Include diagrams, explanations of algorithms, and instructions for reproducing the project.
+2. **Prepare a Presentation**: Create slides showcasing the objectives, process, challenges encountered, and results achieved. 
+Test the game!
