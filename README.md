@@ -2,6 +2,10 @@
 
 BCI (Brain-Computer Interface) project for EEG (Electroencephalography) data processing and classification.
 
+## First Step
+
+You have to clone the repository with the git clone command, the navigate inside the project directory using the cd command
+
 ## Setting environment up
 
 In order to set up environment, I recommend you to use [WSL 2.0 on Windows and install Ubuntu on it](https://ubuntu.com/tutorials/install-ubuntu-on-wsl2-on-windows-11-with-gui-support#1-overview). Furthermore, I recommend git installation procedure for linux based environment :
