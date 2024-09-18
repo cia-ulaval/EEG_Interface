@@ -48,7 +48,10 @@ pyenv install --list | grep " 3\."
 pyenv install <python version>
 
 # For example :
-pyenv install 3.12.6
+
+
+pyenv install 3.12.0
+
 ```
 
 - Choose a specific python version :
