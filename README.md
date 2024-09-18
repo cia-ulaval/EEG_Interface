@@ -134,6 +134,15 @@ poetry run demo
 # Make sure you are in poetry environment
 poetry shell
 
+```
+
+# To run mlflow server
+
+```bash
+# in a new terminal
+mlflow ui
+``` 
+
 # Simply run following command in the root project dir
 pytest
 ```
