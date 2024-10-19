@@ -129,7 +129,7 @@ Please use `notebooks` folder to put all visualization or demo notebooks.
 - To main project script :
 
 ```bash
-poetry run demo
+poetry run demo --input-path="data/EyeStateData.csv"
 ```
 
 - To run unit tests :
@@ -144,7 +144,7 @@ poetry shell
 
 ```bash
 # in a new terminal
-mlflow ui
+mlflow ui --port 5001
 ``` 
 
 # Simply run following command in the root project dir
