@@ -3,7 +3,6 @@ class Threshold:
         self.threshold = threshold
         
     def shouldFlap(self,data):
-        print(data < self.threshold)
         if data < self.threshold:
             return True
         else: 
