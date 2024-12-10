@@ -22,7 +22,7 @@ class EegStream:
         self.board = BoardShim(BoardIds.CYTON_DAISY_BOARD.value, params)
         self.ch_names = BoardShim.get_eeg_names(BoardIds.CYTON_DAISY_BOARD.value)
         self.stop_streaming = False
-        self.threshold = Threshold(-65830.536583726)
+        self.threshold = Threshold(2)
         
 
 
@@ -57,7 +57,9 @@ class EegStream:
         eeg_channels = BoardShim.get_eeg_channels(BoardIds.CYTON_DAISY_BOARD.value)
         frontal_channel = eeg_channels[1]  # Exemple : premier canal frontal
         min_distance = int(0.2 * sampling_rate)  # Minimum 200 ms entre deux clignements
-        num_samples = 20
+        num_samples = 25
+        time.sleep(180)
+        print('lets go !!')
         try:
             while not self.stop_streaming:  
 
@@ -75,19 +77,20 @@ class EegStream:
                     
                     # Filtrage passe-bande 0.5-10 Hz
 
-                    print(frontal_signal)
+                    # print(frontal_signal)
                     # Détection des pics
                     threshold = np.mean(frontal_signal) + 3* np.std(frontal_signal)  # Seuil dynamique
-                    peaks = np.where(frontal_signal  < 1)[0]  # Indices des pics détectés
+                    peaks = np.where(frontal_signal  < 2.5)[0]  # Indices des pics détectés
                     # Filtrer les pics pour éviter les doublons
                     filtered_peaks = []
                     for peak in peaks:
                         if not filtered_peaks or (peak - filtered_peaks[-1] > min_distance):
                             filtered_peaks.append(peak)
-
+                    # print(self.is_space_pressed)
                     # Affichage des clignements détectés
                     if filtered_peaks and not self.is_space_pressed:
                         self.is_space_pressed = True
+                        print(frontal_signal)
                         print(f"Clignements détectés : indices = {filtered_peaks}")
                         print('___________')
                         controller.press(Key.space)
